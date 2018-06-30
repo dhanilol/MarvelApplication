@@ -1,0 +1,90 @@
+* {
+    font-family: 'Marvel', sans-serif;
+}
+
+body {
+    background-image: url(https://developer.marvel.com/i/images/developers/account-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.container.body-content {
+    padding-top: 3%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.bg-dark{
+    background-color: #000000 !important;
+}
+
+span.icon-marvel-logo-svg {
+    display: block;
+    width: 200px;
+    height: 78px;
+    background: url(https://i.annihil.us/u/prod/misc/marvel.svg);
+    background-size: 200px 78px;
+}
+
+span.navbar-brand.mb-0.text-center.h1 {
+    font-family: Marvel;
+    font-size: 30px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+    color: #b5b5b5;
+}
+
+footer {
+    padding-top: 3%;
+}
+
+/**
+ * {[Gallery style]}
+ */
+.pictures { font-size: 0px; }
+
+.pictures .item {
+  position: relative;
+  display: inline-block;
+}
+
+.pictures .item img {
+  position: relative;
+  z-index: 11;
+}
+
+.pictures .item .item_description {
+  position: absolute;
+  z-index: 10;
+  left: -15px;
+  top: -15px;
+  right: -15px;
+  bottom: -60px;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  background: #151515;
+  padding: 15px;
+  display: none;
+}
+
+.pictures .item .item_description span {
+  color: #ffffff;
+  font-size: 13px;
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  height: 30px;
+}
+
+.pictures .item:hover { 
+    transform: scale(1.1);
+    -webkit-transition: transform 0.5s ease-in-out;
+    z-index: 100; 
+}
+
+.pictures .item:hover .item_description { display: block; }

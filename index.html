@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Marvel</title>
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+		<!--Marvel Font-->
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Marvel:400,700">
+        <!--Custom CSS-->
+		<link rel="stylesheet" href="./css/custom.css" />
+
+		<!--jQuery-->
+		<script src="./lib/jquery/dist/jquery.min.js"></script>
+		<!--MD5 hash plugin-->
+		<script type="text/javascript" src="js/jquery.md5.min.js"></script>
+		<!--jQuery TJ gallery-->
+		<script src="./lib/justifiedGallery/jquery-tjgallery.min.js"></script>
+	</head>
+
+	<body>
+
+	    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	        <a class="navbar-brand" href="#">
+	            <span class="icon-marvel-logo-svg" onclick="window.location='@Url.Action("Index", "Home")';"></span>
+	        </a>
+	        <span class="navbar-brand mb-0 text-center h1">API Aplication</span>
+	    </nav>
+
+		<p class="lead text-center" id="message"></p>
+
+	    <div class="container body-content" id="marvel"></div>
+
+	    <!--
+		<script type="text/javascript">
+			jQuery(document).ready(function() { 
+				jQuery('.pictures').tjGallery({
+					selector : '.item',
+					row_min_height : 500,
+					margin : 10
+			 	});
+			});
+		</script>
+		-->
+		
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted text-center" id="footer"></p>
+				<p class="text-muted text-center">&copy; - Marvel API Application </p>
+			</div>
+		</footer>
+
+		<!--Main file-->
+		<script type="text/javascript" src="js/marvel.js"></script>
+		<!--Bootstrap JS-->
+		<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
+	</body>
+</html>
