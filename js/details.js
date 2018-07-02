@@ -21,34 +21,39 @@ var characterDetail = {
             },
             complete: function () {
                 message.innerHTML = "Successfuly done!";
+                message.innerHTML = "<button class='btn btn-md' onclick='window.history.go(-1); return false;'> Go back </button>";
             },
             success: function (data) {
                 attribution.innerHTML = data.attributionHTML;
 
                 var html = "";
-                var i = localStorage.getItem("indice");
+                var i = localStorage.getItem("CharIndex");
                 var element = data.data.results[i];
 
                 html += "<div style='overflow: hidden; margin-top: 50px;'>";
-                    html += "<div style='float: left; margin-right: 50px;'>";
-                        html += "<img src='" + element.thumbnail.path + "/standard_fantastic." + element.thumbnail.extension + "'/>";
-                    html += "</div>";
-                    html += "<div style='margin-left: 50px;'>"
-                        html += "<h2 class='character-name'>Hero name: <a href=" + element.urls[1].url + ">"+ element.name +"</a></h2>";
-                        html += "<p>";
-                        html += "<b>DESCRIPTION:</b>";
-                        html += "<br />";
-                        html += element.description;
-                        html += "</p>";
-                    html += "</div>";
-                    html += "<div class='wiki'>";
-                    html += "<h5>To know more about this character access the <a href=" + element.urls[1].url + " target='_BLANK'>"+ element.name +" Wiki </a></h5>";
-                    html += "</div>";
+                html += "<div style='float: left; margin-right: 50px;'>";
+                html += "<img src='" + element.thumbnail.path + "/standard_fantastic." + element.thumbnail.extension + "'/>";
                 html += "</div>";
-                
+                html += "<div style='margin-left: 50px;'>"
+                html += "<h2 class='character-name'>Hero name: <a href=" + element.urls[1].url + ">" + element.name + "</a></h2>";
+                html += "<p>";
+                html += "<b>DESCRIPTION:</b>";
+                html += "<br />";
+                if (element.description == "") {
+                    html += "Description not available! Please check character Wiki ";
+                } else {
+                    html += element.description;
+                }
+                html += "</p>";
+                html += "</div>";
+                html += "<div class='wiki'>";
+                html += "<h5>To know more about this character access the <a href=" + element.urls[1].url + " target='_BLANK'>" + element.name + " Wiki </a></h5>";
+                html += "</div>";
+                html += "</div>";
+
                 characterContainer.innerHTML = html;
             },
-            
+
             error: function () {
                 message.innerHTML = "We are sorry!";
             }

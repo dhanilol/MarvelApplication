@@ -24,7 +24,7 @@ var marvelCharacters = {
             },
             success: function (data) {
                 attribution.innerHTML = data.attributionHTML;
-                
+
                 var html = "";
 
                 html += "<div class='pictures'>";
@@ -35,7 +35,7 @@ var marvelCharacters = {
                     html += "<a href='details.html' />";
                     html += "<div class='item m-1'>";
                     html += "<div class='item_description'><span class='text-center'> Character name: " + element.name + "</span></div>";
-                    html += "<img id='" + i + "' src='" + element.thumbnail.path + "/standard_fantastic." + element.thumbnail.extension + "' class='test' onclick='test(this.id)'/>";
+                    html += "<img id='" + i + "' src='" + element.thumbnail.path + "/standard_fantastic." + element.thumbnail.extension + "' class='thumbnail' onclick='charIndex(this.id)'/>";
                     html += "</div>";
                     html += "</a>";
 
