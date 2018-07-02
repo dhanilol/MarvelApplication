@@ -21,7 +21,7 @@ var characterDetail = {
             },
             complete: function () {
                 message.innerHTML = "Successfuly done!";
-                message.innerHTML = "<button class='btn btn-md' onclick='window.history.go(-1); return false;'> Go back </button>";
+                message.innerHTML = "<button class='btn btn-primary btn-md' onclick='window.history.go(-1); return false;'> Go back </button>";
             },
             success: function (data) {
                 attribution.innerHTML = data.attributionHTML;
